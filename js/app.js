@@ -44,9 +44,23 @@ function main(ctime) {
     }
 }
 
-function isCollide(sarr) {
+function isCollide(snake) {
 
-    
+    //if snake hits its own body
+    for (let i = 1; i < snakeArr.length; i++) {
+        // const element = array[i];
+        if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
+            return true;
+        }
+
+
+    }
+    //if snake hits the border
+    if (snake[0].x >= 18 || snake[0].x <= 0 && snake[0].y >= 18 || snake[0].y <= 0) {
+        return true;
+    }
+
+
 
     return false;
 }
