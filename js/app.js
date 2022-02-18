@@ -102,6 +102,8 @@ function gameEngine() {
             speed = 7;
         } else if (score >= 15) {
             speed = 8;
+        } else if (score >= 20) {
+            speed = 10;
         }
         document.getElementById('score-value').innerText = score;
 
