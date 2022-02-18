@@ -94,24 +94,24 @@
     #uparrow{
         display: block;
         position: absolute !important;
-        bottom: 180px;
+        bottom: 160px;
     }
     #downarrow{
         display: block;
         position: absolute !important;
-        bottom: 130px;
+        bottom: 110px;
     }
     #leftarrow{
         display: block;
         position: absolute !important;
-        bottom: 130px;
+        bottom: 110px;
         left: 115px;
         
     }
     #rightarrow{
         display: block;
         position: absolute !important;
-        bottom: 130px;
+        bottom: 110px;
         
         right: 115px;
     }
