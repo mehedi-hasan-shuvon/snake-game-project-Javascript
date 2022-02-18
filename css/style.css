@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rowdies:wght@300;400&family=Signika:wght@700&display=swap');
+
 *{
     padding:0;
     margin:0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .background{
@@ -25,7 +28,7 @@
 }
 
 .head{
-    background: linear-gradient(red,yellow);
+    background: linear-gradient(rgb(15, 126, 5),rgb(226, 226, 89));
 
     transform: scale(1.02);
 
@@ -50,9 +53,21 @@
 
 #score{
     position: absolute;
-    top:9px;
+    top:20px;
     right:200px;
-    font-size: 39 px;
+    font-size: 39px;
     font-weight: 700;
-    
+}
+#high-score{
+    position: absolute;
+    top:70px;
+    right:200px;
+    font-size: 39px;
+    font-weight: 700;
+}
+
+.tail{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
 }

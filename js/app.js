@@ -8,6 +8,8 @@ const moveSound = new Audio('music/move.mp3');
 
 const musicSound = new Audio('music/music.mp3');
 
+const highScore = document.getElementById('high-score-value');
+
 let score = 0;
 
 let speed = 5;
@@ -72,14 +74,20 @@ function gameEngine() {
     if (isCollide(snakeArr)) {
         gameOverSound.play();
         musicSound.pause();
+        if (score > parseInt(highScore.innerText)) {
+            console.log("changed high scoor");
+            highScore.innerText = score;
+        }
         score = 0;
+        speed = 5;
         document.getElementById('score-value').innerText = score;
+
         inputDir = { x: 0, y: 0 };
         alert("Game Over. Press any key to play again!");
         snakeArr = [
             { x: 13, y: 15 }
         ]
-        musicSound.play();
+        // musicSound.play();
         score = 0;
 
     }
@@ -88,9 +96,17 @@ function gameEngine() {
     if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
         foodSound.play();
         score += 1;
+        if (score >= 5) {
+            speed = 6;
+        } else if (score >= 10) {
+            speed = 7;
+        } else if (score >= 15) {
+            speed = 8;
+        }
         document.getElementById('score-value').innerText = score;
 
         snakeArr.unshift({ x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y });
+
 
         let a = 2;
         let b = 16;
@@ -128,7 +144,10 @@ function gameEngine() {
         //if it is the head of the snake then red
         if (index === 0) {
             snakeElement.classList.add('head');
-        } else {
+        } else if (index === snakeArr.length - 1) {
+            snakeElement.classList.add('tail');
+        }
+        else {
             // the body of the snake purple
             snakeElement.classList.add('snake');
         }
@@ -155,8 +174,12 @@ function gameEngine() {
 // Main logic starts here 
 window.requestAnimationFrame(main);
 
+
+
+
 window.addEventListener('keydown', function (e) {
     inputDir = { x: 0, y: 1 } //Start the game
+    musicSound.play();
     moveSound.play();
     console.log(e.key);
     switch (e.key) {
