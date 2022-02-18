@@ -65,6 +65,14 @@
     font-size: 39px;
     font-weight: 700;
 }
+#instruction{
+
+    position: absolute;
+    top:10%;
+    left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
 
 .tail{
     background-color: purple;
@@ -94,25 +102,29 @@
     #uparrow{
         display: block;
         position: absolute !important;
-        bottom: 160px;
+        bottom: 20%;
     }
     #downarrow{
         display: block;
         position: absolute !important;
-        bottom: 110px;
+        bottom: 13%;
     }
     #leftarrow{
         display: block;
         position: absolute !important;
-        bottom: 110px;
+        bottom: 13%;
         left: 115px;
         
     }
     #rightarrow{
         display: block;
         position: absolute !important;
-        bottom: 110px;
+        bottom: 13%;
         
         right: 115px;
+    }
+
+    #instruction{
+        display: none;
     }
 }
