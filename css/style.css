@@ -71,3 +71,48 @@
     border: .25vmin solid white;
     border-radius: 12px;
 }
+
+#uparrow{
+    display: none;
+   
+}
+#downarrow{
+    display: none;
+ 
+}
+#leftarrow{
+    display: none;
+   
+}
+#rightarrow{
+    display: none;
+}
+
+
+/* for mobile device  */
+@media only screen and (max-width:688px){
+    #uparrow{
+        display: block;
+        position: absolute !important;
+        bottom: 180px;
+    }
+    #downarrow{
+        display: block;
+        position: absolute !important;
+        bottom: 130px;
+    }
+    #leftarrow{
+        display: block;
+        position: absolute !important;
+        bottom: 130px;
+        left: 115px;
+        
+    }
+    #rightarrow{
+        display: block;
+        position: absolute !important;
+        bottom: 130px;
+        
+        right: 115px;
+    }
+}

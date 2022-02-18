@@ -10,6 +10,7 @@ const musicSound = new Audio('music/music.mp3');
 
 const highScore = document.getElementById('high-score-value');
 
+
 let score = 0;
 
 let speed = 5;
@@ -209,4 +210,38 @@ window.addEventListener('keydown', function (e) {
         default:
             break;
     }
+
+
+
+
 });
+
+//for mobile device
+function up() {
+    musicSound.play();
+    moveSound.play();
+    console.log("ArrowUP pressed");
+    inputDir.x = 0;
+    inputDir.y = -1;
+}
+function down() {
+    musicSound.play();
+    moveSound.play();
+    console.log("ArrowDown pressed");
+    inputDir.x = 0;
+    inputDir.y = 1;
+}
+function left() {
+    musicSound.play();
+    moveSound.play();
+    console.log("ArrowLeft pressed");
+    inputDir.x = -1;
+    inputDir.y = 0;
+}
+function right() {
+    musicSound.play();
+    moveSound.play();
+    console.log("ArrowRight pressed");
+    inputDir.x = 1;
+    inputDir.y = 0;
+}
