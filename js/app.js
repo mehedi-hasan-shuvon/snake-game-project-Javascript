@@ -72,6 +72,8 @@ function gameEngine() {
     if (isCollide(snakeArr)) {
         gameOverSound.play();
         musicSound.pause();
+        score = 0;
+        document.getElementById('score-value').innerText = score;
         inputDir = { x: 0, y: 0 };
         alert("Game Over. Press any key to play again!");
         snakeArr = [
@@ -85,6 +87,9 @@ function gameEngine() {
     //if snake has eaten the food, increment the score and regenerate the food.
     if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
         foodSound.play();
+        score += 1;
+        document.getElementById('score-value').innerText = score;
+
         snakeArr.unshift({ x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y });
 
         let a = 2;

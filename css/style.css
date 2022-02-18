@@ -46,3 +46,13 @@
     border: .25vmin solid white;
     border-radius: 12px;
 }
+
+
+#score{
+    position: absolute;
+    top:9px;
+    right:200px;
+    font-size: 39 px;
+    font-weight: 700;
+    
+}
