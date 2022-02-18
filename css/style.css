@@ -102,24 +102,24 @@
     #uparrow{
         display: block;
         position: absolute !important;
-        bottom: 20%;
+        bottom: 15%;
     }
     #downarrow{
         display: block;
         position: absolute !important;
-        bottom: 13%;
+        bottom: 8%;
     }
     #leftarrow{
         display: block;
         position: absolute !important;
-        bottom: 13%;
+        bottom: 8%;
         left: 115px;
         
     }
     #rightarrow{
         display: block;
         position: absolute !important;
-        bottom: 13%;
+        bottom: 8%;
         
         right: 115px;
     }
