@@ -25,7 +25,14 @@
 }
 
 .head{
-    background-color: red;
+    background: linear-gradient(red,yellow);
+
+    transform: scale(1.02);
+
+    border: 2px solid purple;
+
+    border-radius: 9px;
+
 }
 
 .food{
